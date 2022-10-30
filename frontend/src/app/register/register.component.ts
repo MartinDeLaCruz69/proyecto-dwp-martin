@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-register',
@@ -7,19 +8,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
+  user = {
+    email: '',
+    password: '',
+    username: '',
+    userlastname: ''
+  }
+
+  constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
-    
+
   }
-  test (){
-    let inputPassword = document.getElementById("password") as HTMLInputElement;
-    let valuesPassword = inputPassword.value;
-    if (valuesPassword.length >= 8) {
-      console.log("Ingreso correctamente");
-    }else{
-      alert("El Minimo de Caracteres es de 8");
-    }
+
+  register(){
+    this.authService.register(this.user)
+    .subscribe(
+      res =>{
+      console.log(res)
+    },
+    err => console.log(err)
+    )
   }
 }
 
