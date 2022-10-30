@@ -6,13 +6,14 @@ import { HomeComponent } from './home/home.component';
 import { TasksComponent } from './tasks/tasks.component';
 import { PrivateTasksComponent } from './private-tasks/private-tasks.component';
 
+import { AuthGuard } from "./auth.guard";
 
 const routes: Routes = [
   {path:'login', component: LoginComponent },
   {path:'register', component: RegisterComponent},
   {path:'home', component: HomeComponent},
   {path:'tasks', component: TasksComponent},
-  {path:'private-tasks', component: PrivateTasksComponent},
+  {path:'private-tasks', component: PrivateTasksComponent, canActivate:[AuthGuard]},
   {
     path:'',
     redirectTo: '/home',
