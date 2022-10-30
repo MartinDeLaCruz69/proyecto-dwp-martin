@@ -8,6 +8,8 @@ import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NuevacontrasenaComponent } from './nuevacontrasena/nuevacontrasena.component';
+import { TasksComponent } from './tasks/tasks.component';
+import { PrivateTasksComponent } from './private-tasks/private-tasks.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { NuevacontrasenaComponent } from './nuevacontrasena/nuevacontrasena.comp
     RegisterComponent,
     HomeComponent,
     NavbarComponent,
-    NuevacontrasenaComponent
+    NuevacontrasenaComponent,
+    TasksComponent,
+    PrivateTasksComponent
   ],
   imports: [
     BrowserModule,
