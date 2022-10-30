@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,300,0,0');
 body {
     font-family: 'Poppins', sans-serif;
     min-height: 100vh;
@@ -20,7 +20,7 @@ body {
     padding-right:100px;
     background-color:#46b2ff;
     }
-    
+
 .button:hover {
         background-color: rgba(0, 0, 0, 0);
     }
