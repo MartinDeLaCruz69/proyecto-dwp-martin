@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { TasksComponent } from './tasks/tasks.component';
 import { PrivateTasksComponent } from './private-tasks/private-tasks.component';
 
+
 import { AuthGuard } from "./auth.guard";
 
 const routes: Routes = [

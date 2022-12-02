@@ -3,11 +3,24 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    min-height: 100vh;
-    background: linear-gradient(to right, #3091ff, #0de7ff);
+    height: 703px;
+    background: linear-gradient(45deg, #1d87ff, #08e2fa);
+    background-size: 400% 400%;
+    animation: gradient 15s ease-in infinite;
+    justify-content: center;
     display: flex;
     align-items: center;
-    justify-content: center;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .button {

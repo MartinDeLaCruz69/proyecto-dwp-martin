@@ -6,7 +6,7 @@
             </div>
             <div class="login-card-header">
                 <h1>Inicia sesión</h1>
-                <div>Por favor logeate para la plataforma</div>
+                <div>Por favor, inicia sesión para ingresar a la plataforma</div>
             </div>
             <form (submit)="login()" class="login-card-form">
                 <div class="form-item">
@@ -17,23 +17,14 @@
                     <span class="form-item-icon material-symbols-rounded">lock</span>
                     <input type="password" [(ngModel)]="user.password" [ngModelOptions]="{standalone: true}" name="password" placeholder="Password" required>
                 </div>
-                <div class="form-item-other">
-                    <div class="checkbox">
-                        <input type="checkbox" id="rememberMeCheckbox">
-                        <label for="rememberMeCheckbox">Recuérdame</label>
-                    </div>
-                    <a href="#">Olvidé mi contraseña</a>
-                </div>
-
                 <button class="button" type="submit">Inicia sesión</button>
 
             </form>
             <div class="login-card-footer">
-                ¿No tienes cuenta? <a href="register">Crea una cuenta gratis</a>.
+                ¿No tienes una cuenta? <a href="register">Crea una cuenta gratis aquí</a>.
             </div>
         </div>
         <div class="login-card-social">
-            <div>Buscanos en otras plataformas:</div>
             <div class="login-card-social-btn">
                 <a href="https://es-la.facebook.com/IBM/">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="50" height="50" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">

@@ -1,13 +1,15 @@
+<header class="header">
 <nav class="stroke">
     <ul>
       <li><a routerLink="/home" routerLinkActive="active">Inicio</a></li>
-      <li><a routerLink="/private-tasks" routerLinkActive="active">Private Tasks</a></li>
-      <li><a routerLink="/tasks" routerLinkActive="active">Tasks</a></li>
+      <li><a routerLink="/private-tasks" routerLinkActive="active">Tareas Privadas</a></li>
+      <li><a routerLink="/tasks" routerLinkActive="active">Tareas</a></li>
       <ng-container *ngIf="!authService.loggedIn(); else loggedIn ">
-        <li><a routerLink="/login" routerLinkActive="active">Ingresar a mi sesión</a></li>
+        <li><a routerLink="/login" routerLinkActive="active">Iniciar sesión</a></li>
       </ng-container>
       <ng-template #loggedIn>
-        <li><a class="nav-link" style="cursor:pointer" (click)="authService.logout()">Abandonar mi sesión</a></li>
+        <li><a class="nav-link" style="cursor:pointer" (click)="authService.logout()">Abandonar sesión</a></li>
       </ng-template>
     </ul>
 </nav>
+</header>
