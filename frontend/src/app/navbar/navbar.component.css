@@ -3,7 +3,7 @@
 
 nav{
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(45deg, #08e2fa, #1d87ff);
+    background: linear-gradient(45deg, #56ccf2, #2f80ed);
     background-size: 400% 400%;
     animation: gradient 15s ease-in infinite;
     justify-content: center;
@@ -31,12 +31,12 @@ nav{
   }
   nav ul li a {
     display: block;
-    padding: 10px;
+    padding: 1px;
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-weight: 1000;
     text-transform: uppercase;
-    margin: 0 100px;
+    margin: 0 30px;
   }
   nav ul li a,
   nav ul li a:after,
@@ -77,7 +77,6 @@ nav{
   nav.fill ul li a:after {
     text-align: left;
     content: '.';
-    margin: 0;
     opacity: 0;
   }
   nav.fill ul li a:hover {

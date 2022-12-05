@@ -2,8 +2,10 @@
 <nav class="stroke">
     <ul>
       <li><a routerLink="/home" routerLinkActive="active">Inicio</a></li>
-      <li><a routerLink="/private-tasks" routerLinkActive="active">Tareas Privadas</a></li>
-      <li><a routerLink="/tasks" routerLinkActive="active">Tareas</a></li>
+      <li><a routerLink="/private-tasks" routerLinkActive="active">Instrucciones para usuarios registrados</a></li>
+      <li><a *ngIf="user =='Admin'" routerLinkActive="active" routerLink="/listar-usuario">Lista de usuarios</a></li>
+      <li><a *ngIf="user =='Admin'" routerLinkActive="active" routerLink="/listar-actividad">Lista de actividades</a></li>
+      <li><a routerLink="/tasks" routerLinkActive="active">Instrucciones</a></li>
       <ng-container *ngIf="!authService.loggedIn(); else loggedIn ">
         <li><a routerLink="/login" routerLinkActive="active">Iniciar sesión</a></li>
       </ng-container>

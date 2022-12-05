@@ -25,7 +25,11 @@
                     <span class="form-item-icon material-symbols-rounded">group</span>
                     <input type="text" [(ngModel)]="user.userlastname" [ngModelOptions]="{standalone: true}" name="lastname" placeholder="Last name" required autofocus>
                 </div>
-                <button type="submit" class="button">Registrate</button>
+                <div class="form-item">
+                    <span class="form-item-icon material-symbols-rounded">how_to_reg</span>
+                    <input type="text" [(ngModel)]="user.direccion" [ngModelOptions]="{standalone: true}" name="direction" placeholder="Direction" required autofocus>
+                </div>
+                <input class="button" type="submit" value="Registrarse">
             </form>
         </div>
     </div>

@@ -13,8 +13,16 @@ export class RegisterComponent implements OnInit {
     email: '',
     password: '',
     username: '',
-    userlastname: ''
+    userlastname: '',
+    rol: 'empleado',
+    direccion: '',
+    nombreactividad: '',
+    descripcionactividad: '',
+    fecha: ''
   }
+
+  passwordStrong = /(?=(.*[0-9]))(?=.*[\!@#$%^&*()\\[\]{}\-_+=~`|:;"'<>,./?])(?=.*[a-z])(?=(.*[A-Z]))(?=(.*)).{8,}/
+
 
   constructor(
     private authService: AuthService,
@@ -25,14 +33,24 @@ export class RegisterComponent implements OnInit {
   }
 
   register(){
+    if (this.passwordStrong.test(this.user.password)) {
+      console.log('Se validó la contraseña');
+    } else {
+      alert('Favor de seguir las especificaciones de contraseña en "Instrucciones"');
+      return;
+    }
+
     this.authService.register(this.user)
     .subscribe(
       res => {
         console.log(res);
         localStorage.setItem('token', res.token);
-        this.router.navigate(['/private-tasks']);
+        this.router.navigate(['/home']);
+        alert('El usuario fue registrado exitosamente');
       },
-      err => console.log(err)
+      err => {
+        console.log(err)
+        alert("Falló el registro de usuario") }
     )
   }
 }

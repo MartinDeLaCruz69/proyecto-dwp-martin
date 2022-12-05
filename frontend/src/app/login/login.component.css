@@ -4,7 +4,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     height: 703px;
-    background: linear-gradient(45deg, #1d87ff, #08e2fa);
+    background: linear-gradient(45deg, #2f80ed, #56ccf2);
     background-size: 400% 400%;
     animation: gradient 15s ease-in infinite;
     justify-content: center;

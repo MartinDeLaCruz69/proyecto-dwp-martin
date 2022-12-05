@@ -14,7 +14,11 @@ export class LoginComponent implements OnInit {
     password: '',
     username: '',
     userlastname: '',
-    rol: ''
+    rol: '',
+    direccion: '',
+    nombreactividad: '',
+    descripcionactividad: '',
+    fecha: ''
   }
 
   constructor(
@@ -36,9 +40,12 @@ export class LoginComponent implements OnInit {
         localStorage.setItem('token', res.token);
         localStorage.setItem('correo', res.user.email);
         localStorage.setItem('rol', res.user.rol);
-        this.router.navigate(['/private-tasks']);
+        this.router.navigate(['/listar-usuarios']);
+        alert("Se ha iniciado sesion exitosamente");
       },
-      err => console.log(err)
+      err => {
+        console.log(err)
+        alert("Falló el inicio de sesión") }
     )
   }
 }

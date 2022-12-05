@@ -8,8 +8,9 @@ import { Router } from "@angular/router";
 export class AuthService {
 
   private URL = 'http://localhost:3000/api'
+  public user;
 
-  constructor(private http: HttpClient, private router: Router) { }
+  constructor(private http: HttpClient, private router: Router) {this.user=(localStorage.getItem('rol')) }
 
   register(user: any) {
     return this.http.post<any>(this.URL + '/signup', user);
@@ -29,6 +30,8 @@ export class AuthService {
 
   logout() {
     localStorage.removeItem('token');
+    localStorage.removeItem('correo');
+    localStorage.removeItem('rol');
     this.router.navigate(['/login'])
   }
 
